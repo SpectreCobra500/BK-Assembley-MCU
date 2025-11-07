@@ -5,16 +5,26 @@ enum InstrType
 {
     jump,
     singleReg,
-    dualReg
+    dualReg,
+    tripReg
 };
 
 std::unordered_map<char*, InstrType> decodeTable = {
     // N single reg
     {"load", singleReg},
+    {"jr", singleReg},
+
+    // N dual reg
+    {"iadd", dualReg},
+    {"isub", dualReg},
+    {"isrl", dualReg},
+    {"isll", dualReg},
+    {},
+
+    // N trip reg
 
     // 7 Jump instruction
     {"j", jump},
-    {"jr", jump},
     {"jnz", jump},
     {"jz", jump},
     {"jeq", jump},
