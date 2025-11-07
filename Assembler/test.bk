@@ -1,0 +1,4 @@
+Main:
+    load 50 r10
+    load 10 r11
+    add r10 r11 r12
